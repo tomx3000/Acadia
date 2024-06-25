@@ -15,7 +15,8 @@ def getGeminiModels():
             print(m.name)
         
 def generateText():
-    model = genai.GenerativeModel('gemini-1.5-pro')
+    model = genai.GenerativeModel('gemini-1.5-flash')
+    # model = genai.GenerativeModel('gemini-1.5-pro')
     response = model.generate_content(
         '''Give me the topics for learning driving car ,
           return them as a  json with major topic as the attribute and minor topics as list value
