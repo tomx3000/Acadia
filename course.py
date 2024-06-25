@@ -1,4 +1,5 @@
 import json
+
 class Course:
     def __init__(self, json_data):
         if isinstance(json_data, str):
@@ -38,3 +39,9 @@ class Course:
                 print(f"  Topic: {topic}")
                 for lesson in topic_data[topic]:
                     print(f"    Lesson: {lesson}")
+
+    def get_lesson_for_topic(self, level, topic):
+        lessons = self.get_lessons(level, topic)
+        if lessons:
+            return lessons
+        return None
