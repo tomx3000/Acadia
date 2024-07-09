@@ -1,3 +1,5 @@
+
+
 from gemini_api_client import GeminiAPIClient
 import json
 
@@ -11,8 +13,8 @@ class Lesson:
     
     def generate_full_content(self, level):
         prompt = f"""
-        Give me a detailed lesson on {self.title}, {self.content} for learning level {level}.
-        """
+        Give me a detailed lesson on {self.title}, {self.content} for learning level {level}.       
+         """
         response_text = gemini_client.send_prompt(prompt)
 
         # Print the response text for debugging
@@ -21,6 +23,13 @@ class Lesson:
 
         self.full_content = response_text
 
+    def to_dict(self):
+        return {
+            "title": self.title,
+            "content": self.content,
+            "full_content": self.full_content
+        }
+
 class Levels:
     def __init__(self, title):
         self.title = title
@@ -28,6 +37,12 @@ class Levels:
 
     def add_lesson(self, lesson):
         self.lessons.append(lesson)
+
+    def to_dict(self):
+        return {
+            "title": self.title,
+            "lessons": [lesson.to_dict() for lesson in self.lessons]
+        }
 
 class Course:
     def __init__(self, json_data):
@@ -84,6 +99,16 @@ class Course:
     def get_lesson_for_topic(self, level_title, topic_title):
         return self.get_lessons(level_title, topic_title)
 
+    def to_dict(self):
+        return {
+            "levels": [level.to_dict() for level in self.levels]
+        }
+
+    def write_to_file(self, file_path):
+        course_dict = self.to_dict()
+        with open(file_path, 'w') as f:
+            json.dump(course_dict, f, indent=4)
+
 if __name__ == "__main__":
     # Example JSON data
     json_data = '''
@@ -129,3 +154,6 @@ if __name__ == "__main__":
     course.levels[0].lessons[0].generate_full_content("Beginner")
     print("\nDetailed Lesson Content:")
     print(course.levels[0].lessons[0].full_content)
+
+    # Write the entire course to a file
+    course.write_to_file("course_content.json")

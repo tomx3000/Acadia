@@ -1,0 +1,34 @@
+{
+    "levels": [
+        {
+            "title": "Beginner",
+            "lessons": [
+                {
+                    "title": "Introduction to Python",
+                    "content": "Understanding Python's syntax, data types, variables, and basic operations.",
+                    "full_content": "## Introduction to Python: Your First Steps into the World of Coding\n\nWelcome to the exciting world of Python programming! This lesson will guide you through the fundamentals of Python, equipping you with the knowledge to write your first simple programs.\n\n### What is Python?\n\nPython is a high-level, general-purpose programming language known for its readability and ease of use. It's widely used in various fields, including web development, data science, machine learning, and automation.\n\n### Why Learn Python?\n\n* **Beginner-friendly:** Python's simple syntax resembles natural language, making it easy to learn for beginners.\n* **Versatility:** Python is used in numerous applications, opening doors to exciting career opportunities.\n* **Large community:** A vast and supportive community ensures ample resources, tutorials, and help when you need it.\n* **In-demand skills:** Python skills are highly sought after by employers across various industries.\n\n### Setting Up Your Python Environment\n\n1. **Download Python:** Visit the official Python website (https://www.python.org/downloads/) and download the installer for your operating system.\n2. **Install Python:** Follow the on-screen instructions to install Python on your computer.\n3. **Test installation:** Open your command prompt or terminal and type `python --version`. You should see the installed version of Python.\n\n### Understanding Python's Syntax\n\nPython code is written in a clear and straightforward manner. Here are some essential syntax elements:\n\n* **Indentation:** Python uses indentation (spaces or tabs) to define blocks of code. This is crucial for the interpreter to understand the program's structure.\n* **Comments:** Comments are used to explain code and improve readability. They are ignored by the interpreter. Use `#` to start a single-line comment.\n* **Keywords:** Python has reserved words like `if`, `else`, `for`, `while`, etc., which have specific meanings in the language.\n* **Operators:** Operators perform actions on data. Examples include arithmetic operators (+, -, *, /), comparison operators (==, !=, <, >), and logical operators (and, or, not).\n\n### Data Types\n\nData types determine the kind of values a variable can hold. Some common data types in Python include:\n\n* **Integer (`int`):** Whole numbers, e.g., 10, -5, 0.\n* **Float (`float`):** Numbers with decimal points, e.g., 3.14, -2.5.\n* **String (`str`):** Sequences of characters enclosed in single or double quotes, e.g., \"Hello\", 'World'.\n* **Boolean (`bool`):** Represents truth values, either `True` or `False`.\n\n### Variables\n\nVariables are containers that store data. To assign a value to a variable, use the assignment operator (`=`).\n\n```python\nmy_name = \"Alice\"\nage = 25\nis_student = True\n```\n\n### Basic Operations\n\nLet's explore some fundamental operations you can perform with Python:\n\n* **Arithmetic Operations:**\n    * Addition (`+`)\n    * Subtraction (`-`)\n    * Multiplication (`*`)\n    * Division (`/`)\n    * Modulus (remainder) (`%`)\n    * Exponentiation (`**`)\n* **String Operations:**\n    * Concatenation (`+`): Combines strings, e.g., \"Hello\" + \" World\"\n    * Indexing: Access individual characters in a string, e.g., \"Hello\"[0] returns \"H\".\n* **Input and Output:**\n    * `print()`: Displays output to the console.\n    * `input()`: Takes user input from the console.\n\n### Example: A Simple Calculator\n\n```python\n# Get user input for two numbers\nnum1 = float(input(\"Enter the first number: \"))\nnum2 = float(input(\"Enter the second number: \"))\n\n# Perform addition\nsum = num1 + num2\n\n# Print the result\nprint(\"The sum of\", num1, \"and\", num2, \"is:\", sum)\n```\n\n### Summary\n\nThis introduction has provided you with the foundation to begin your Python journey. Now you have a basic understanding of Python's syntax, data types, variables, and simple operations. \n\nKeep practicing and exploring, and you'll soon be writing more complex and fascinating Python programs!\n"
+                },
+                {
+                    "title": "Control Flow",
+                    "content": "Learning about conditional statements (if-else), loops (for, while), and functions.",
+                    "full_content": ""
+                },
+                {
+                    "title": "Data Structures",
+                    "content": "Exploring lists, tuples, dictionaries, and sets for organizing and managing data.",
+                    "full_content": ""
+                },
+                {
+                    "title": "Input and Output",
+                    "content": "Getting user input and displaying output using print statements and file handling.",
+                    "full_content": ""
+                },
+                {
+                    "title": "String Manipulation",
+                    "content": "Learning techniques for working with text, including formatting, slicing, and searching.",
+                    "full_content": ""
+                }
+            ]
+        }
+    ]
+}

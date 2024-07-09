@@ -5,15 +5,14 @@ import json
 class CourseGenerator:
     def __init__(self):
         self.gemini_client = GeminiAPIClient()
-
                
-            #    {{"Level": [{{"Main Topic 1": ["minor topic1", "minor topic2"]}}]}}.
+    #    {{"Level": [{{"Main Topic 1": ["minor topic1", "minor topic2"]}}]}}.
     def generate_course_content(self, topic):
         prompt = f"""
         Give me the topics for learning {topic}.
         Return them as JSON with major topics as the attributes and minor topics as list values.
         Example: 
-
+        
         {{
             "Beginner": [
                 {{
@@ -49,8 +48,7 @@ class CourseGenerator:
         except ValueError as e:
             print(f"Initialization error: {e}")
             return None
-
-
+        
     def generate_lessons_for_topic(self,course, topic,level, lesson):
         """Generate lessons for a specific level and topic."""
         prompt = (
