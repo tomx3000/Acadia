@@ -2,7 +2,7 @@ import google.generativeai as genai
 from secureKey import GEMENI_API_KEY
 
 class GeminiAPIClient:
-    def __init__(self, model_name='gemini-1.5-pro'):
+    def __init__(self, model_name='gemini-1.5-flash'):
         self.api_key = GEMENI_API_KEY
         self.model_name = model_name
         self.configure_genai()
